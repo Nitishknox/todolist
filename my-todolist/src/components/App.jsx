@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Todos from "./todolist"
 
 function App() {
   const [item, setitem] = useState(" ");
@@ -11,7 +12,7 @@ function App() {
   function Submit() {
     setlist((prev) => [...prev, item]);
     setitem(" ");
-  }
+  } 
   return (
     <div className="container">
       <div className="heading">
@@ -26,7 +27,7 @@ function App() {
       <div>
         <ul>
           {list.map((x) => (
-            <li>{x}</li>
+           <Todos text={x}/>
           ))}
         </ul>
       </div>
